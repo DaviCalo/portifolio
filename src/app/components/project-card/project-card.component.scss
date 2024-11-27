@@ -1,0 +1,126 @@
+@import '../../assets/styles/color.scss';
+@import '../../assets/styles/typography.scss';
+
+.card-block{
+    max-width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.card-block:hover{
+    backdrop-filter: blur(15px); 
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: background 0.5s;
+}
+
+#project-article-main:hover .card-block:not(:hover) {
+  opacity: 0.6;
+}
+
+.card-action-section{
+    width: 195px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttomcard{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.buttomcard a{
+    text-decoration: none;
+    backdrop-filter: blur(15px); 
+    background-color: rgba(150, 150, 150,0.1);
+    border-radius: 4px;
+    transition: background 0.5s;
+    padding: 1px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    width: 80px;
+    height: 22px;
+    text-align: baseline;
+    @include font-body-small;
+
+}
+
+.buttomcard a:visited{
+    border: 2px solid white;
+}
+
+.buttomcard a:hover{
+    background-color: rgba(150, 150, 150,0.25);
+}
+
+.buttomcard a:active{
+    border: 1px solid white;
+    background-color: rgba(150, 150, 150);
+}
+
+.card-name-section p{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    unicode-bidi: isolate;
+    cursor: default;
+}
+
+
+.card-name-section{
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.card-name-section-title{
+    @include font-body-large;
+}
+
+.card-name-section-subtitle{
+    @include font-body-medium;
+}
+
+.card-block img{
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0);
+}
+
+.card-block:hover img{
+    border-radius: 5px;
+    border: 2px solid rgba(150, 150, 150, 0.1);
+}
+
+.card-name-section-technology {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: start;
+    align-items: bottom;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.card-name-section-technology p{
+    @include font-label-medium;
+    background-color:#3B274A;
+    padding: 5px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.card-block:hover .card-name-section-title{
+    color:  #B660FF;
+}

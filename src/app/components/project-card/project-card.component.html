@@ -1,0 +1,17 @@
+<div class="card-block">
+    <div class="card-action-section">
+        <img [src]="imageUrl" [alt]="imageDescrepiton" width="190" height="95">
+        <div class="buttomcard">
+            <a href="" target="_blank">Code</a>
+        </div>
+    </div>
+    <div class="card-name-section">
+        <p class="card-name-section-title">{{title}}</p>
+        <p class="card-name-section-subtitle">{{subtitle}}</p>
+        <div class="card-name-section-technology">
+            <div *ngFor="let tag of tags">
+                <p>{{ tag }}</p>
+            </div>
+        </div>
+    </div>
+</div>
