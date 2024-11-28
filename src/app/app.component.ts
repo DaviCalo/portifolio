@@ -17,7 +17,7 @@ export class AppComponent {
   title = 'angular-portifolio';
   projects: {imageUrl: string, imageDescription: string, title: string, subtitle: string, tags: string[], gitUrl: string, deployUrl: string}[] = [
     {
-      imageUrl: '../../src/app/assets/images/gravitation.png',
+      imageUrl: 'images/gravitation.png',
       imageDescription: 'Imagem do projeto 1',
       title: 'The Gravity',
       subtitle: 'Mini simulação do movimento gravitacional entre a Terra e a lua. Usando a formula da gravitação universal. Apresentado como trabalho final de uma disciplina.',
