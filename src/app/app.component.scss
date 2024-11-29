@@ -57,6 +57,8 @@
 
 .title-article{
     @include font-title-medium;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     text-align: start;
     margin-bottom: 0.8rem;

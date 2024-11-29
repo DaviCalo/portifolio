@@ -1,0 +1,33 @@
+<div id="switch-projects-container">
+  <div>
+    <input type="radio" id="ALL" name="switch-projects" value="ALL" checked/>
+    <label for="ALL" class="custom-radio" display="none" class="ALL-label"></label>
+  </div>
+
+  <div>
+    <input type="radio" id="FRONTEND" name="switch-projects" value="FRONTEND" (click)="onRadioChange($event)"/>
+    <label for="FRONTEND" class="custom-radio" title="Frotend">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 3.25C0 1.45507 1.45507 0 3.25 0H24.75C26.5449 0 28 1.45507 28 3.25V18.75C28 20.5449 26.5449 22 24.75 22H18.0059V24.0012L21.0042 24.0012C21.5565 24.0012 22.0042 24.4486 22.0042 25.0005C22.0042 25.5525 21.5565 25.9999 21.0043 25.9999L7.01197 26C6.45969 26 6.01197 25.5526 6.01196 25.0007C6.01196 24.4488 6.45967 24.0013 7.01196 24.0013L10.01 24.0013V22H3.25C1.45507 22 0 20.5449 0 18.75V3.25ZM12.01 22V24.0013L16.0059 24.0013V22H12.01Z" fill="#BEBEBE"/>
+        </svg>
+    </label>
+  </div>
+
+  <div>
+    <input type="radio" id="MOBILE" name="switch-projects" value="MOBILE" (click)="onRadioChange($event)"/>
+    <label for="MOBILE" class="custom-radio" title="Mobile">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="62" viewBox="0 0 48 70" fill="none">
+            <path d="M0.375 9.8C0.375 4.9945 4.12 0.875 8.999 0.875H39.001C43.8835 0.875 47.625 4.9945 47.625 9.8V60.2C47.625 65.0055 43.88 69.125 39.001 69.125H8.999C4.1165 69.125 0.375 65.0055 0.375 60.2V9.8ZM18.75 11.375C18.0538 11.375 17.3861 11.6516 16.8938 12.1438C16.4016 12.6361 16.125 13.3038 16.125 14C16.125 14.6962 16.4016 15.3639 16.8938 15.8562C17.3861 16.3484 18.0538 16.625 18.75 16.625H29.25C29.9462 16.625 30.6139 16.3484 31.1062 15.8562C31.5984 15.3639 31.875 14.6962 31.875 14C31.875 13.3038 31.5984 12.6361 31.1062 12.1438C30.6139 11.6516 29.9462 11.375 29.25 11.375H18.75Z" fill="#BEBEBE"/>
+        </svg>
+    </label>
+  </div>
+
+  <div>
+    <input type="radio" id="BACKEND" name="switch-projects" value="BACKEND" (click)="onRadioChange($event)"/>
+    <label for="BACKEND" class="custom-radio" title="Backend">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 4.487V7C0 8.355 2.29 9.5 5 9.5C7.71 9.5 10 8.355 10 7V4.487C8.943 5.413 7.136 6 5 6C2.864 6 1.057 5.413 0 4.487ZM5 5C7.761 5 10 3.881 10 2.5C10 1.119 7.761 0 5 0C2.239 0 0 1.119 0 2.5C0 3.881 2.239 5 5 5ZM0 8.959V11.5C0 12.925 2.149 14 5 14C7.851 14 10 12.925 10 11.5V8.959C8.934 9.895 7.111 10.5 5 10.5C2.889 10.5 1.066 9.894 0 8.959Z" fill="#BEBEBE"/>
+        </svg>
+    </label>
+  </div>
+</div>

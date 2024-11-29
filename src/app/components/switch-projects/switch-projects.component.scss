@@ -1,0 +1,55 @@
+@import '../../assets/styles/color.scss';
+
+#switch-projects-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    border-radius: 100px;
+    background-color: #1A1A1A;
+}
+
+#ALL, #ALL-label{
+    display: none;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+  
+label {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.custom-radio {
+    width: 17px;
+    height: 17px;
+    box-sizing: content-box;
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1A1A1A;
+    transition: background-color 0.3s;
+}
+
+input[type="radio"]:checked + .custom-radio {
+    background-color: $on-primary;
+}
+
+input[type="radio"]:checked + .custom-radio svg path {
+    fill: $primary;
+}
