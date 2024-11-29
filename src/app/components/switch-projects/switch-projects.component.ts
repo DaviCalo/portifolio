@@ -14,7 +14,8 @@ export class SwitchProjectsComponent {
   onRadioChange(event: any): void {
     if(event.target.value === this.inputValue) {
       this.inputValueChange.emit("ALL");
-      event.target.checked = false;
+      event.target.checked = !event.target.checked;
+      this.inputValue = '';
     } else {
       this.inputValue = event.target.value;
       this.inputValueChange.emit(event.target.value);

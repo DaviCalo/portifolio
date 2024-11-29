@@ -52,8 +52,32 @@
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    overflow-y: auto;
+    overflow-y: scroll;
+    padding-right: 10px;
 }
+
+/* Estilos para a barra de rolagem */
+::-webkit-scrollbar {
+    width: 6px; /* Largura da barra de rolagem vertical */
+    height: 6px; /* Altura da barra de rolagem horizontal */
+  }
+  
+  /* Estilos para o track (fundo da barra de rolagem) */
+  ::-webkit-scrollbar-track {
+    background: none;
+  }
+  
+  /* Estilos para o thumb (botão de rolagem) */
+  ::-webkit-scrollbar-thumb {
+    background-color: $on-primary;
+    border-radius: 100px;
+  }
+  
+  /* Estilos para o thumb ao passar o mouse */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: $primary;
+  }
+  
 
 .title-article{
     @include font-title-medium;
