@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { TagModel } from '../../models/tag.model';
 
 @Component({
   selector: 'app-project-card',
@@ -16,7 +16,7 @@ export class ProjectCardComponent {
   @Input() title: String = '';
   @Input() subtitle: String = '';
 
-  @Input() tags: String[] = [];
+  @Input() tags: TagModel[] = [];
 
   @Input() gitUrl: String = '';
   @Input() deployUrl: String = '';

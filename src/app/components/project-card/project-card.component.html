@@ -1,8 +1,29 @@
-<div class="card-block">
+<div class="card-project">
+    <div class="action-project">
+        <img [src]="imageUrl" [alt]="imageDescrepiton" width="190" height="95">
+        <div class="buttomcard">
+            <a [href]="gitUrl" target="_blank">Code</a>
+            <a [href]="deployUrl" target="_blank">Deploy</a>
+        </div>
+    </div>
+    <div class="card-name-section">
+        <p class="card-name-section-title">{{title}}</p>
+        <p class="card-name-section-subtitle">{{subtitle}}</p>
+        <div class="card-name-section-technology">
+            <div *ngFor="let tag of tags">
+                <img [src]="tag.iconUrl" [alt]="tag.title" [title]="tag.title">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="card-block">
     <div class="card-action-section">
         <img [src]="imageUrl" [alt]="imageDescrepiton" width="190" height="95">
         <div class="buttomcard">
-            <a href="" target="_blank">Code</a>
+            <a [href]="gitUrl" target="_blank">Code</a>
+            <a [href]="deployUrl" target="_blank">Deploy</a>
         </div>
     </div>
     <div class="card-name-section">
@@ -14,4 +35,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

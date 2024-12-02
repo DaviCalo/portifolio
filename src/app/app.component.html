@@ -1,7 +1,8 @@
 <main class="main">
   <div id="container">
     <div id="container-left">
-      <div id="titles">
+      <div id="titles" >
+        <!-- <img id="img-profile" src="images/profile.JPG" id="profile" alt="Davi Calô"> -->
         <span id="span-h1">Davi Calô</span>
         <span id="span-h2">Desenvolvedor de software</span>
         <span id="span-h3">
@@ -9,30 +10,33 @@
           <br> Universidade Federal do Ceará.
         </span>
       </div>
-      <app-navigation/>
+      <app-navigation [item]="activerNavItem" (itemSeleted)="onClickNavItem($event)" (mouseenter)="onMouseEnterNavigation()" (mouseleave)="onMouseLeaveNavigation()"/>
       <app-social-links-component/>
     </div>
-    <div id="container-right">
-      <div class="title-article" id="articleaboutme-title">Sobre</div>
+    <div id="container-right" #containerRight>
+      <div class="title-article" id="articleaboutme-title" #articleAboutMe>Sobre</div>
       <article id="articleaboutme">
         <p>
-          Descobri a programação em 2020 e, desde então, ela se tornou minha paixão. Decidi seguir uma graduação em Sistemas e Mídias Digitais, que me proporcionou uma sólida formação em programação, design e outras mídias. Agora, estou finalizando minha graduação com um foco principal no desenvolvimento web. Tenho particular interesse em criar software que combine design e engenharia de forma harmoniosa. Quando não estou programando, gosto de ler ficção científica e explorar o Blender.
+          Descobri a programação em 2020 e, desde então, ela se tornou minha paixão. Decidi seguir uma graduação em Sistemas e Mídias Digitais, que me proporcionou uma sólida formação em programação, design e outras mídias. Agora, estou finalizando minha graduação com um foco principal no desenvolvimento web. Tenho particular interesse em criar software que combine design e engenharia de forma harmoniosa.
         </p>   
       </article>
-      <div class="title-article">
+      <div class="title-article" id="projects-title" #articleProject>
         Projetos
         <app-switch-projects (inputValueChange)="onInputValueChange($event)"/>
       </div>
-      <div *ngFor="let project of projects | filter:filterValue">
-        <app-project-card 
-          [imageUrl]="project.imageUrl" 
-          [imageDescrepiton]="project.imageDescription"
-          [title]="project.title" 
-          [subtitle]="project.subtitle" 
-          [tags]="project.tags" 
-          [gitUrl]="project.gitUrl" 
-          [deployUrl]="project.deployUrl"
-        />
+      <div id="project-article-main">
+        <div *ngFor="let project of projects | filter:filterValue">
+          <app-project-card 
+            [imageUrl]="project.imageUrl" 
+            [imageDescrepiton]="project.imageDescription"
+            [title]="project.title" 
+            [subtitle]="project.subtitle" 
+            [tags]="project.tags" 
+            [gitUrl]="project.gitUrl" 
+            [deployUrl]="project.deployUrl"
+            class="card-project"
+          />
+        </div>
       </div>
     </div>
   </div>

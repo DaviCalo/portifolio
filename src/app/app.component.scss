@@ -7,8 +7,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $surface-bright;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.28);
+    background-color: $surface;
+    // box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.28);
     padding: 4rem;
     border-radius: 30px;
 }
@@ -28,6 +28,16 @@
     align-content: center;
     justify-content: center;
     background-color: transparent;
+}
+
+#profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    width: 100px; 
+    height: 100px;
+    object-fit: cover;
 }
 
 #span-h1{
@@ -52,7 +62,8 @@
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    overflow-y: scroll;
+    overflow-y: auto;
+    scroll-behavior: smooth;
     padding-right: 10px;
 }
 
@@ -92,4 +103,9 @@
 #articleaboutme{
     @include font-body-medium;
     cursor: default;
+}
+
+
+#project-article-main:hover .card-project:not(:hover) {
+    opacity: 0.25;
 }
